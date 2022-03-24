@@ -15,7 +15,26 @@ public class c_erf_03 {
         // 12  01100
         // 3   00011
 
-        System.out.println();
+        System.out.println(km(arr, 1, 3));
+    }
+
+
+    private static int km(int[] arr, int k, int m) {
+        int[] t = new int[32];
+
+        for (int num : arr) {
+            for (int j = 31; j >= 0; j--) {
+                t[j] += (num >> j) & 1;
+            }
+        }
+
+        int ans = 0;
+        for (int i = 0; i < 32; i++) {
+            if (t[i] % m != 0) {
+                ans |= (1 << i);
+            }
+        }
+        return ans;
     }
 
 
