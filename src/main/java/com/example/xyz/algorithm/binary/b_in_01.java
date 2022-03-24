@@ -1,4 +1,4 @@
-package com.example.xyz.algorithm.Binary;
+package com.example.xyz.algorithm.binary;
 
 /*
 打印一个整数的32位
