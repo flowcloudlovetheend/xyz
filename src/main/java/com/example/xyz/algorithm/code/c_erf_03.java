@@ -25,7 +25,7 @@ public class c_erf_03 {
         int ans = 0;
         for (int i = 0; i < 32; i++) {
             if (t[i] % m != 0) {
-                ans |= (1 << i);
+                ans += (1 << i);
             }
         }
         return ans;
